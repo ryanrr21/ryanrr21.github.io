@@ -1,0 +1,93 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #b0e9e9;
+}
+
+#Setup {
+  background-color: #b0e9e9;
+}
+
+section {
+  padding-top: 5rem;
+}
+/* My Setup Section */
+.Setup-box {
+  position: relative;
+  background-color: aqua;
+  border-radius: 10px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+.Setup-box::before {
+  content: "MY";
+  position: absolute;
+  color: #000000;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.Setup-box:hover::before {
+  opacity: 0.2;
+}
+.Setup-box::after {
+  content: "Setup";
+  position: absolute;
+  color: #000000;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 270px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.Setup-box:hover::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.2;
+}
+.Setup-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  font-size: 1em;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 50px);
+}
+.Setup-box:hover .Setup-name {
+  top: 30px;
+  opacity: 1;
+}
+.Setup-detail-button {
+  position: absolute;
+  font-size: 1em;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.Setup-box:hover .Setup-detail-button {
+  bottom: 20px;
+  opacity: 1;
+}
+.Setup-image {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 100px);
+  max-width: 325px;
+  transition: 00.5s;
+}
+.Setup-box:hover .Setup-image {
+  transform: translate3d(-50%, -50%, 50px) rotate(5deg) scale(1.2);
+}
